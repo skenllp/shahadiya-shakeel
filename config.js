@@ -25,8 +25,9 @@ window.INVITE = {
   groomParents: "Son of Mr. Abdul Kader & Mrs. Suhredha",
   groomHome: "“Maison De Fathima”, Edayilpeedika, Mahe",
 
-  /* Google Apps Script Web App URL for RSVP. Deploy Code.gs as Web App and paste the URL here: */
-  rsvpScriptUrl: "https://script.google.com/macros/s/AKfycbz4DFneiWlAAROK1EcWbegkxa849On0ax9_rLRBG-KOGZEjGnSvH_QeuA_9FgXIQoFs/exec",
+  /* WhatsApp RSVP number in international format without + or spaces, and the prefilled wish. */
+  rsvpWhatsApp: "918330884661",
+  rsvpWish: "Assalamu alaikum! Wishing you both a lifetime of love and barakah. In shaa Allah, we will be there to celebrate with you.",
 
   /* Photos are turned off for this invitation (commented out in index.html). */
   portrait: "",
