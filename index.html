@@ -106,7 +106,7 @@ button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,#c
 .day{font:500 12.5px/1.4 var(--body);letter-spacing:.18em;text-transform:uppercase;color:var(--gold-text);margin:22px 0 10px}
 .item{position:relative;padding:0 0 22px 26px;border-left:1px solid var(--line);margin-left:6px}
 .item::before{content:"";position:absolute;left:-7px;top:2px;width:13px;height:13px;border-radius:50%;background:var(--gold2);box-shadow:0 0 0 3px var(--bg)}
-.item .t{font:500 13px/1 var(--body);letter-spacing:.14em;color:var(--gold-text)}
+.item .t{display:inline-block;font:700 16px/1 var(--body);letter-spacing:.1em;color:var(--gold-text);padding:8px 16px;border:1px solid var(--gold2);border-radius:999px;background:rgba(194,64,90,.12)}
 .item .n{font:500 21px/1.25 var(--body);margin-top:6px}
 .item .a{font-size:16px;color:var(--soft)}
 .item .link{display:inline-block;margin-top:10px}
@@ -166,7 +166,7 @@ body{background:#050304}
 [data-t="weekday"]{color:var(--gold-text);font-size:12px;font-weight:700}
 .time{display:inline-block;margin-top:8px;padding:6px 16px;border:1px solid var(--line);border-radius:999px;background:rgba(194,64,90,.14);color:var(--gold-text);font-size:18px;font-weight:600;letter-spacing:.12em}
 .day{font-size:14px;letter-spacing:.2em}
-.item .t{font-size:14px;font-weight:600}
+.item .t{background:rgba(194,64,90,.2)}
 </style>
 </head>
 <body>
@@ -238,7 +238,7 @@ body{background:#050304}
   <div class="prog">
     <div class="day" data-t="dayLine"></div>
     <div class="item">
-      <div class="t" data-t="timeText"></div>
+      <div class="t">Nikkah: <span data-t="timeText"></span></div>
       <div class="n"><span data-t="eventName">Nikkah</span></div>
       <div data-t="venue"></div>
       <div class="a" data-t="address"></div>
