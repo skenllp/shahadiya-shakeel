@@ -74,6 +74,7 @@ button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,#c
 .names em{font:400 .6em/1.2 "Pinyon Script",cursive}
 .hdate{font:500 19px/1.25 var(--body);letter-spacing:.18em;text-transform:uppercase;color:var(--gold-text);margin-top:6px}
 .hline{font:400 19px/1.4 var(--script);color:var(--soft);margin-top:14px;text-wrap:balance}
+.hquote{font:italic 400 16px/1.45 var(--body);max-width:390px;margin:12px auto;color:var(--soft);text-wrap:balance}
 .sprig{width:34px;height:52px;margin:20px auto 0;display:block;color:var(--gold)}
 .sdown{margin-top:24px}
 
@@ -161,7 +162,11 @@ body{background:#050304}
 .pill,.seg button[aria-pressed="true"]{background:linear-gradient(135deg,#a8243f,#d94a68);color:#fff}
 .toast.success{color:#8fd18a}.toast.error{color:#ff8a8a}
 .wish,.fam .c,.prog{background:var(--card)}
-.names,.names em,.hdate,.hero .cap,.hline,.dateBig,.time,h2,.nm,.welcome,.count b{color:#fff}
+.names,.names em,.hdate,.hero .cap,.hline,.hquote,.dateBig,.time,h2,.nm,.welcome,.count b{color:#fff}
+[data-t="weekday"]{color:var(--gold-text);font-size:12px;font-weight:700}
+.time{display:inline-block;margin-top:8px;padding:6px 16px;border:1px solid var(--line);border-radius:999px;background:rgba(194,64,90,.14);color:var(--gold-text);font-size:18px;font-weight:600;letter-spacing:.12em}
+.day{font-size:14px;letter-spacing:.2em}
+.item .t{font-size:14px;font-weight:600}
 </style>
 </head>
 <body>
@@ -186,17 +191,17 @@ body{background:#050304}
   <div class="bless in" lang="ar">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
   <div class="cap in">
     <div>BY THE GRACE OF ALLAH,</div>
-    <div style="margin-top:10px">WE INVITE YOU TO JOIN US IN CELEBRATING THE MARRIAGE OF OUR DEAR DAUGHTER</div>
+    <!-- <div style="margin-top:10px">WE INVITE YOU TO JOIN US IN CELEBRATING THE MARRIAGE OF OUR DEAR DAUGHTER</div> -->
   </div>
   <!-- <div class="mono in" aria-hidden="true"><span data-t="brideI"></span><span data-t="groomI"></span></div> -->
-  <div class="names in" style="margin:26px 0 10px"><span data-t="brideFull"></span><em style="margin:4px 0">with</em><span data-t="groomFull"></span></div>
+  <div class="names in" style="margin:22px 0 10px"><span data-t="brideFull"></span><em style="margin:4px 0">with</em><span data-t="groomFull"></span></div>
+  <p class="hquote in">With sabr in our hearts and tawakkul in Allah, a new journey begins. We welcome you to share this blessed day, as Shahadiya and Shakeel start their life together, where two hearts say Qubool Hai, In Sha Allah.</p>
   <div class="dia in"><i></i><b></b><i></i></div>
   <div class="cap in" data-t="weekday"></div>
   <div class="hdate in" data-t="dateLong"></div>
   <div class="cap in" style="margin-top:6px" data-t="hijriDate"></div>
   <div class="dia in"><i></i><b></b><i></i></div>
   <div class="cap in" data-t="venueShort"></div>
-  <div class="hline in">in shaa Allah, we would love to have you with us</div>
   <svg class="sprig in" viewBox="0 0 34 52" fill="none" stroke="currentColor" aria-hidden="true"><path d="M1 51V17a16 16 0 0 1 32 0v34z"/><path d="M17 44V13M17 36c-3-1-6-3-7-6 3 0 6 2 7 4m0-2c3-1 6-3 7-6-3 0-6 2-7 4m0-6c-3-1-5-3-6-6 3 0 5 2 6 4m0-2c3-1 5-3 6-6-3 0-5 2-6 4"/></svg>
   <div class="cap sdown in">Scroll down</div>
 </section>
@@ -223,7 +228,6 @@ body{background:#050304}
   <div class="welcome">“And He placed between you affection and mercy.”</div>
   <div class="vref">Quran 30 : 21</div>
   <!-- <div class="portrait" id="portrait"></div> -->
-  <p class="welcome" style="font-size:20px;margin-top:24px">With sabr in our hearts and tawakkul in Allah, a new journey begins. We welcome you to share this blessed day, as Shahadiya and Shakeel start their life together, where two hearts say Qubool Hai, In Sha Allah.</p>
 </section> 
 <!-- photo band (no photos)
 <div class="band" style="background-image:url(assets/band-2.jpg)"></div>
@@ -267,6 +271,7 @@ body{background:#050304}
 <!-- photo band (no photos)
 <div class="band" style="background-image:url(assets/band-1.jpg)"></div>
 -->
+<!-- RSVP section (commented out)
 <section class="sec pad rv">
   <div class="rs">
     <div class="gcap">Join us</div><h2>Will You Celebrate With Us?</h2>
@@ -282,6 +287,7 @@ body{background:#050304}
     </form>
   </div>
 </section>
+-->
 
 <section class="sec pad rv" style="padding-top:10px">
   <div class="gcap">Guest book</div><h2>Wishes &amp; Blessings</h2>
@@ -428,7 +434,7 @@ function reveal(){if(!('IntersectionObserver' in window))return;
   const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.remove('pre');io.unobserve(e.target);}}),{threshold:.12});
   document.querySelectorAll('.rv').forEach(el=>{if(el.getBoundingClientRect().top>innerHeight){el.classList.add('pre');io.observe(el);}});}
 
-/* rsvp submission to Google Sheets */
+/* rsvp submission to Google Sheets (commented out with RSVP section)
 const yes=$('#yes'),no=$('#no'),toast=$('#toast'),rForm=$('#rsvp'),rSubmit=$('#rSubmit');
 const att=v=>{yes.setAttribute('aria-pressed',v);no.setAttribute('aria-pressed',!v);$('#cntWrap').hidden=!v;};
 yes.onclick=()=>att(true);no.onclick=()=>att(false);
@@ -496,6 +502,7 @@ rForm.addEventListener('submit',async e=>{
     rSubmit.textContent=originalText;
   }
 });
+*/
 })();
 </script>
 </body>
