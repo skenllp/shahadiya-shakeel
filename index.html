@@ -436,7 +436,11 @@ if(rsvpWa&&C.rsvpWhatsApp){
   };
   rWish.addEventListener('input',updateWa);
   updateWa();
-}else if(rsvpWa){rsvpWa.hidden=true;}
+}else if(rsvpWa){
+  const rSec=rsvpWa.closest('section');
+  if(rSec)rSec.style.display='none';
+  else rsvpWa.hidden=true;
+}
 })();
 </script>
 </body>

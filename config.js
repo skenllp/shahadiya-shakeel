@@ -21,12 +21,13 @@ window.INVITE = {
 
   brideParents: "Daughter of Mr. Sharafudheen A & Mrs. Shakeela M K",
   brideGrand: "Granddaughter of Haji Mr. P. Moideen Koya (Late) and Mr. N. Hussain (Late)",
-  brideHome: "“Shazi Ghar”, Chettamkunnu, Thalassery · 9447437700",
+  brideHome: "“Shazi Ghar”, Chettamkunnu, Thalassery",
   groomParents: "Son of Mr. Abdul Kader & Mrs. Suhredha",
   groomHome: "“Maison De Fathima”, Edayilpeedika, Mahe",
 
   /* WhatsApp RSVP number in international format without + or spaces, and the prefilled wish. */
-  rsvpWhatsApp: "918330884661",
+  // rsvpWhatsApp: "918330884661", // Temporarily disabled (uncomment to re-enable)
+  rsvpWhatsApp: "",
   rsvpWish: "Assalamu alaikum! Wishing you both a lifetime of love and barakah. In shaa Allah, we will be there to celebrate with you.",
 
   /* Photos are turned off for this invitation (commented out in index.html). */
